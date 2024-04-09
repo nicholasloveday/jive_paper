@@ -1,6 +1,8 @@
 """
 Implementation of some basic threshold weighted scoring functions.
 See Taggart (2021) https://doi.org/10.1002/qj.4206
+
+In the future, this will be implemented in https://github.com/nci/scores
 """
 
 import functools
