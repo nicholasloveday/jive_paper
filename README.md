@@ -4,42 +4,27 @@ This repository contains the code to generate figures used in the paper.
 
 [Scores](https://github.com/nci/scores) is used to produce verification results.
 
-The majority of the data used is on [zenodo](https://zenodo.org/records/11015211).
+The majority of the data used is on [zenodo](https://zenodo.org/records/11015211). The zip file size is 49.5 MB.
 
 ## Reproducing the results
 
-### Python environment
+### Prerequisites
 
-You will need:
+You will require:
+* [miniconda](https://docs.anaconda.com/free/miniconda/miniconda-install/)
+* [snakemake](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html)
 
-* Python >= 3.10
-* miniconda or mambaforge
-* snakemake >= 5.2.4
-* zenodo_get >= 1.3.4
-
-#### Installing miniconda
-
-See [Installing miniconda](https://docs.anaconda.com/free/miniconda/miniconda-install/)
-
-#### Installing mamba (recommended)
-
-```shell
-conda install -n base -c conda-forge mamba
-conda activate base
-mamba init
-source ~/.bashrc  # to activate mamba activate functionality
-```
-
-#### Creating environment from environment.yml
-
-```shell
-mamba env create --file environment.yml
-mamba activate jive_paper
-```
-
-or if using conda:
+### Running snakemake
 
 ```
-conda env create --file environment.yml
-conda activate jive_paper
+snakemake -c 1 all
 ```
+
+## Directory layout
+
+  - `src/`: The notebooks and python code used to produce the figures and maps in the Jive paper.
+  - `data/`: The data used by the notebooks.
+  - `results/`: The figures and maps produced by running snakemake to reproduce report contents are placed here.
+  - `logs/`: The logs from running snakemake. Only useful if there are issues running the code.
+  - `environment.yml`: the conda environment file used by snakemake to run the notebooks.
+  - `Snakefile`: the snakemake file to reproduce paper figures and maps.
