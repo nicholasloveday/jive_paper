@@ -2,8 +2,18 @@
 *.json
 *__pycache__/
 
+# zenodo data
+data_for_jive_paper.zip
+data/dailypop/
+data/exposed_peaks/
+data/sw_wa_wind/
+data/temperature/
+data/windmax_exp/
+
+# snakemake reproducible outputs
 results/
 processed_data/
 
+# snakemake produced files
 .snakemake/
 logs/
