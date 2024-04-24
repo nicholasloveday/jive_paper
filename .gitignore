@@ -17,3 +17,4 @@ processed_data/
 # snakemake produced files
 .snakemake/
 logs/
+md5sums.txt
