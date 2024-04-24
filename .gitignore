@@ -1,3 +1,9 @@
 *.nc
 *.json
 *__pycache__/
+
+results/
+processed_data/
+
+.snakemake/
+logs/
