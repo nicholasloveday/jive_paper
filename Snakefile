@@ -119,6 +119,3 @@ rule exposed_peaks_fig:
     "results/figures/wind_exposed_peaks.pdf",
     "results/station_maps/b_wind_exposed_peaks_stations.pdf"
   notebook: "src/exposed_peaks_fig.ipynb"
-
-rule clean:
-  shell: "source clean.sh"
